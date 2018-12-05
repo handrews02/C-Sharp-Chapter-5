@@ -18,7 +18,7 @@ namespace OddNums
                     Write(i.ToString());
 
                 }
-                Write();
+                WriteLine();
             }
 
         }
