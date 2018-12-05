@@ -20,6 +20,7 @@ namespace HomeSales2
             double eTotal = 0;
             double fTotal = 0;
             double total;
+            double highest = 0;
 
             //get input
                 WriteLine("Sales Associates, enter your initals >>> ");
@@ -41,11 +42,20 @@ namespace HomeSales2
                     eTotal = eTotal + sales;
                 else if (name == 'f' || name == 'F')
                     fTotal = fTotal + sales;
+                else
+                    WriteLine("ERROR!");
 
                 WriteLine("Sales Associates, enter your initals >>> ");
                 inputName = ReadLine();
                 name = Convert.ToChar(inputName);
-            }   
+            }
+            if (dTotal > eTotal && dTotal > fTotal)
+                highest = dTotal;
+            else if (eTotal > dTotal && eTotal > fTotal)
+                highest = eTotal;
+            else if (fTotal > dTotal && fTotal > eTotal)
+                highest = fTotal;
+
 
             //write output
             total = dTotal + eTotal + fTotal;
@@ -53,6 +63,7 @@ namespace HomeSales2
             WriteLine("E: Your total is ${0}", eTotal);
             WriteLine("D: Your total is ${0}", dTotal);
             WriteLine("Your grand total is ${0}", total);
+            WriteLine("Thes highest total is ${0}", highest);
 
 
 

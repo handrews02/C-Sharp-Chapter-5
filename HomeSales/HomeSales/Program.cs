@@ -34,7 +34,7 @@ namespace HomeSales
                     inputSales = ReadLine();
                     dSales = Convert.ToDouble(inputSales);
                     dTotal = dTotal + dSales;
-                    WriteLine("Your total is ${0}", dTotal);
+                    WriteLine("Your totakl is ${0}", dTotal);
                    
                 }
                 else if(name == 'e' || name == 'E')
@@ -61,12 +61,6 @@ namespace HomeSales
                 }
 
             }
-            if( name == 'z' || name == 'Z')
-            {
-                return;
-            }
-            total = eTotal + fTotal + dTotal;
-            WriteLine("Your total is " + total);
         }
     }
 }
