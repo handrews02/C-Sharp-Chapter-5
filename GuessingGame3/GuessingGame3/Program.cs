@@ -12,8 +12,6 @@ namespace GuessingGame3
         static void Main(string[] args)
         {
             int guess = 0;
-            int highLow = 0;
-            
             int count = 0;
             int min = 1;
             int max = 11;
