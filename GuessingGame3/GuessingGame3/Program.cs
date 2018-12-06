@@ -28,7 +28,7 @@ namespace GuessingGame3
             while (guess != randomNumber)
             {
                 Console.WriteLine("Enter a number between 1 and 10 >> ");
-                guess = int.Parse(Console.ReadLine());
+                guess = int.Parse(ReadLine());
 
                 if (guess < randomNumber)
                 {
