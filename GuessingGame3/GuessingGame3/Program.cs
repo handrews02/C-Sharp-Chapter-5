@@ -11,10 +11,14 @@ namespace GuessingGame3
     {
         static void Main(string[] args)
         {
-            int guess = 12;
+            int guess = 0;
+            int highLow = 0;
+            
             int count = 0;
             int min = 1;
             int max = 11;
+            int againL = 1;
+            int againH = 10;
 
 
             Random ranNumberGenerator = new Random();
@@ -32,12 +36,21 @@ namespace GuessingGame3
                 {
                     Console.WriteLine("Higher");
                     count++;
-
+                    if(guess <= againL)
+                    {
+                        WriteLine("What are you doing?! That was stupid!");
+                    }
+                    againL = guess;
                 }
                 else if (guess > randomNumber)
                 {
                     Console.WriteLine("Lower");
                     count++;
+                    if (guess >= againH)
+                    {
+                        WriteLine("What are you doing?! That was stupid!");
+                    }
+                    againH = guess;
                 }
                 else if (guess < 0 || guess > 10)
                 {
@@ -47,8 +60,10 @@ namespace GuessingGame3
             }
             if (guess == randomNumber)
             {
-                Console.WriteLine("You are correct! It took you {0} times to guess {1}", count + 1, randomNumber);
+                count++;
+                Console.WriteLine("You are correct! It took you {0} times to guess {1}", count, randomNumber);
             }
+
         }
     }
 }
